@@ -45,7 +45,7 @@ plt.grid(True)
 plt.show()
 ```
 
-![generated test data](../assets/images/ml_simple_linear_regression/test_data.jpg)
+![generated test data](/assets/images/ml_simple_linear_regression/test_data.jpg)
 
 ## Define linear regression model
 
@@ -113,7 +113,7 @@ model.fit(x,y)
 # Cost at iteration 1000 is:  0.00313857310878851
 ```
 
-![cost_vs_iteration](../assets/images/ml_simple_linear_regression/cost.jpg)
+![cost_vs_iteration](/assets/images/ml_simple_linear_regression/cost.jpg)
 
 ```python
 model.parameters()
@@ -134,4 +134,4 @@ plt.ylabel('Output(y)')
 plt.show()
 ```
 
-![prediction](../assets/images/ml_simple_linear_regression/prediction.jpg)
+![prediction](/assets/images/ml_simple_linear_regression/prediction.jpg)
