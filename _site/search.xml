@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    <entry>
+      <title><![CDATA[Two Sum]]></title>
+      <url>/leetcode/2020/06/18/two_sum/</url>
+      <content type="text"><![CDATA[QuestionGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution.Example:Given nums = [2, 7, 11, 15], target = 9,Because nums[0] + nums[1] = 2 + 7 = 9,return [0, 1].AnalysisSolutionclass Solution {public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {        unordered_map&lt;int, int&gt; umap; // another num, cur index;        vector&lt;int&gt; vec(2);        for (int i=0; i&lt; nums.size(); ++i) {            if (umap.count(nums[i])) {                vec[0] = umap[nums[i]];                vec[1] = i;                return vec;            } else {                umap[target - nums[i]] = i;            }        }        return vec;    }};class Solution(object):    def twoSum(self, nums, target):        """        :type nums: List[int]        :type target: int        :rtype: List[int]        """        h = {}        for index, item in enumerate(nums):            if target - item not in h:                h[item] = index            else:                return [index, h[target-item]]]]></content>
+      <categories>
+        
+          <category> Leetcode </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Leedcode </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Two Sum II Input Array Is Sorted]]></title>
+      <url>/leetcode/2020/06/18/two_sum-ii_input_array_is_sorted/</url>
+      <content type="text"><![CDATA[QuestionGiven an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.You may assume that each input would have exactly one solution.Input: numbers={2, 7, 11, 15}, target=9Output: index1=1, index2=2AnalysisSolutionclass Solution {public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) {        vector&lt;int&gt; res;        for (int i=0, j=numbers.size()-1; i&lt;j;) {            if (numbers[i]+numbers[j] &gt; target) --j;            else if (numbers[i]+numbers[j]&lt;target) ++i;            else {                res.push_back(i+1);                res.push_back(j+1);                break;            }        }        return res;    }};class Solution(object):    def twoSum(self, numbers, target):        """        :type numbers: List[int]        :type target: int        :rtype: List[int]        """        i, j = 0, len(numbers)-1        while i&lt;j:            sum = numbers[i] + numbers[j]            if sum == target:                return [i+1,j+1]            elif sum &lt; target:                i+=1            else:                j-=1]]></content>
+      <categories>
+        
+          <category> Leetcode </category>
+        
+      </categories>
+      <tags>
+        
+          <tag> Leedcode </tag>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+</search>
