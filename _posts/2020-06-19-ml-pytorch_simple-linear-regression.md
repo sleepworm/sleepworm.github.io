@@ -10,7 +10,7 @@ tags:
 - linear regression
 - pytorch
 ---
-之前有一篇用Numpy从零搭建Linear Regression。 想着可以简单的用Pytorch做一下，当然对于Pytorch来说有些大材小用了，一个feature, 一个output，就算是简单的学习了
+之前有一篇用 [Numpy从零搭建Linear Regression]({% post_url 2020-06-19-ml-simple-linear-regression-from-scratch %})。 想着可以简单的用Pytorch做一下，当然对于Pytorch来说有些大材小用了，一个feature, 一个output，就算是简单的学习了
 
 ## Import library
 
