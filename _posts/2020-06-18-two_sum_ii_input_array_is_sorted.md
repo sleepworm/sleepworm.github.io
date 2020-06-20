@@ -3,8 +3,12 @@ title: Two Sum II Input Array Is Sorted
 date: 2020-06-18 22:41
 categories:
 - Leetcode
+- array
+- 数组
 tags:
 - Leetcode
+- array
+- 数组
 ---
 
 ## Question
