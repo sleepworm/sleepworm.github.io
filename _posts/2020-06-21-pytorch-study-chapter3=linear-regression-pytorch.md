@@ -1,6 +1,6 @@
 ---
 title: Pytorch 学习笔记 - Linear Regression (2)
-date: 2020-06-21 09:58
+date: 2020-06-21 16:52
 categories:
 - machine learning
 - pytorch
