@@ -359,6 +359,70 @@ fig.set_zlabel('predicted y')
 plt.show()
 ```
 
-
 ![input_data](/assets/images/pytorch_learn/ch3_p4_linear_regression_prediction.svg)
 
+### Interactive 3D 图
+
+```python
+import plotly.graph_objects as go
+import plotly.express as px
+
+# fig = px.scatter_3d(x=X[:,0].numpy(),y=X[:,1].numpy(), z=y[:,0].numpy())
+input_data = go.Scatter3d(
+    x = X[:,0].numpy(),
+    y = X[:,1].numpy(),
+    z = y[:,0].numpy(),
+    mode = 'markers',
+    name = 'Input Data',
+    marker = dict(
+        color = 'rgb(160, 57, 147)',
+        size = 2,
+        symbol = 'circle',
+        opacity = 0.9
+    )
+)
+
+predict_data = go.Scatter3d(
+    x = X[:,0].numpy(),
+    y = X[:,1].numpy(),
+    z = y_hat.detach().numpy()[:,0],
+    mode = 'markers',
+    name = 'Predict Data',
+    marker = dict(
+        color = 'rgb(50, 168, 139)',
+        size = 2,
+        symbol = 'circle',
+        opacity = 0.9
+    )
+)
+
+data = [input_data, predict_data]
+layout = go.Layout(
+    scene = dict(
+        xaxis = dict(title='X1'),
+        yaxis = dict(title='X2'),
+        zaxis = dict(title='y'),
+    ),
+    margin = dict(
+        l=10,
+        r=10,
+        b=10,
+        t=10
+    ),
+    width = 620,
+    height = 440,
+)
+
+fig = go.Figure(data = data, layout = layout)
+fig.show()
+```
+
+<script type="text/javascript">
+  function resizeIframe(obj){
+     obj.style.height = 0;
+     obj.style.height = obj.contentWindow.document.body.scrollHeight  + 'px';
+     obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
+  }
+</script>
+<iframe src="/assets/images/plotly/figure.html" frameborder="0" scrolling="no"
+    onload='resizeIframe(this)'></iframe>
