@@ -367,7 +367,7 @@ plt.show()
 
 ```python
 import plotly.graph_objects as go
-import plotly.express as px
+# import plotly.express as px
 
 # fig = px.scatter_3d(x=X[:,0].numpy(),y=X[:,1].numpy(), z=y[:,0].numpy())
 input_data = go.Scatter3d(
@@ -426,5 +426,5 @@ fig.show()
      obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
   }
 </script>
-<iframe src="/assets/images/plotly/figure.html" frameborder="0" scrolling="no"
+<iframe src="/assets/images/plotly/ch3_p4_linear_regression_python.html" frameborder="0" scrolling="no"
     onload='resizeIframe(this)'></iframe>
