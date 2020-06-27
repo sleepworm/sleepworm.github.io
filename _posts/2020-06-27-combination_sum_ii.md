@@ -15,7 +15,7 @@ tags:
 - 回溯法
 ---
 
-## 1 Question
+## Question
 
 Given a collection of candidate numbers (**C**) and a target number (**T**), find all unique combinations in **C** where the candidate numbers sums to **T**.
 
