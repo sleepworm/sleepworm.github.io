@@ -39,7 +39,6 @@ If *n* = 4 and *k* = 2, a solution is:
 
 ## Solution
 
-### 记录所有可得到的集合
 ```c++
 class Solution {
 public:
